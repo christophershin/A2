@@ -423,7 +423,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f00a79918dc4a18a050534219a9842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines.Examples::Unity.Splines.Examples.LoftRoadBehaviour
-  m_Widths: []
+  m_Widths:
+  - m_IndexUnit: 0
+    m_DefaultValue: 0.25
+    m_DataPoints: []
   m_Spline: {fileID: 8390433574636905032}
   m_SegmentsPerMeter: 1
   m_Mesh: {fileID: 0}
