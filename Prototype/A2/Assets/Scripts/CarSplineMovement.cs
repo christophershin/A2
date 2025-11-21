@@ -8,6 +8,9 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.Splines.Interpolators;
+using UnityEngine.Serialization;
+using Interpolators = UnityEngine.Splines.Interpolators;
+using Quaternion = UnityEngine.Quaternion;
 
 namespace Unity.Splines.Examples
 {
@@ -157,95 +160,95 @@ namespace Unity.Splines.Examples
 
 
 
-        void Start()
-        {
+ //       void Start()
+ //       {
 
-            _time *= 60;
+ //           _time *= 60;
 
-            splineLength = container.CalculateLength();
-            //path = paths[0];
-            var localToWorldMatrix = container.transform.localToWorldMatrix;
-            paths[3] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix)
-
-
-            });
-
-            paths[2] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix)
+ //           splineLength = container.CalculateLength();
+ //           //path = paths[0];
+ //           var localToWorldMatrix = container.transform.localToWorldMatrix;
+ //           paths[3] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix)
 
 
-            });
+ //           });
 
-            paths[1] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix)
-
-
-            });
-
-            paths[0] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix)
+ //           paths[2] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix)
 
 
-            });
+ //           });
 
-            paths[7] = new SplinePath(new[]
- {
-                new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix)
-
-
-            });
-
-            paths[6] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix)
+ //           paths[1] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix)
 
 
-            });
+ //           });
 
-            paths[5] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix)
-
-
-            });
-
-            paths[4] = new SplinePath(new[]
-            {
-                new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
-                new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix)
+ //           paths[0] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container.Splines[2], new SplineRange(0, _time), localToWorldMatrix)
 
 
-            });
+ //           });
 
-            StartCoroutine(CarPathCoroutine());
-        }
-    }
+ //           paths[7] = new SplinePath(new[]
+ //{
+ //               new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix)
+
+
+ //           });
+
+ //           paths[6] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix)
+
+
+ //           });
+
+ //           paths[5] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix)
+
+
+ //           });
+
+ //           paths[4] = new SplinePath(new[]
+ //           {
+ //               new SplineSlice<Spline>(container2.Splines[3], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[0], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[1], new SplineRange(0, _time), localToWorldMatrix),
+ //               new SplineSlice<Spline>(container2.Splines[2], new SplineRange(0, _time), localToWorldMatrix)
+
+
+ //           });
+
+ //           StartCoroutine(CarPathCoroutine());
+ //       }
+       }
 }
