@@ -4,12 +4,12 @@ using UnityEngine;
 public class ItemBox : MonoBehaviour
 {
 
-    [SerializeField] GameObject itemBox;
+    [SerializeField] GameObject Item;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        itemBox.GetComponent<GameObject>();
+        
     }
 
     // Update is called once per frame
@@ -20,9 +20,10 @@ public class ItemBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Car")
+        if (other.tag == "Car")
         {
-            itemBox.SetActive(false);
+
+            this.gameObject.SetActive(false);
         }
     }
 }
