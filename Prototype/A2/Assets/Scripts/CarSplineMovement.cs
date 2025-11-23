@@ -41,5 +41,6 @@ namespace Unity.Splines.Examples
             }
 
         }
+
        }
 }
