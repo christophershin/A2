@@ -410,6 +410,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3156393971871299990}
     m_Modifications:
+    - target: {fileID: 2669288627414554018, guid: 348d10fb144eb5145a669f8972a2c25d, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 08d5eb4133c61cd42845949604818254, type: 2}
+    - target: {fileID: 4003344357702797152, guid: 348d10fb144eb5145a669f8972a2c25d, type: 3}
+      propertyPath: m_Name
+      value: NavMeshFloor
+      objectReference: {fileID: 0}
     - target: {fileID: 6167766561230211837, guid: 348d10fb144eb5145a669f8972a2c25d, type: 3}
       propertyPath: m_Name
       value: ThreeLaneSpline
@@ -643,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3804467156646280973, guid: 4b59cd3920011644baac5acb4d2a4572, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.78
+      value: 8.08
       objectReference: {fileID: 0}
     - target: {fileID: 3804467156646280973, guid: 4b59cd3920011644baac5acb4d2a4572, type: 3}
       propertyPath: m_LocalPosition.y
