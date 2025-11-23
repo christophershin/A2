@@ -3,8 +3,10 @@ using UnityEngine.AI;
 
 public class NavController : MonoBehaviour
 {
-    public GameObject theTarget;
+    
     private NavMeshAgent theAgent;
+    private GameObject theTarget;
+    public float maxTargetDistance;
     void Start()
     {
         theAgent = GetComponent<NavMeshAgent>();
@@ -13,6 +15,39 @@ public class NavController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theAgent.destination = theTarget.transform.position;
+
+
+        if (theTarget)
+        {
+            float dis = Vector3.Distance(transform.position, theTarget.transform.position);
+
+            if(dis>=maxTargetDistance)
+            {
+                theTarget = null;
+            }
+            else
+            {
+                theAgent.destination = theTarget.transform.position;
+            }  
+        }
+
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(theTarget==null)
+        {
+            if (other.gameObject.CompareTag("Vehicle"))
+            {
+                if (other.gameObject.GetComponent<NavTarget>().isOccupied == false)
+                {
+                    theTarget = other.gameObject;
+                    other.gameObject.GetComponent<NavTarget>().isOccupied = true;
+                }
+
+            }
+        }
+    }
+
 }

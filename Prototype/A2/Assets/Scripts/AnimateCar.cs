@@ -13,8 +13,8 @@ namespace Unity.Splines.Examples
     {
 
 
-        [SerializeField]
-        SplineContainer m_SplineContainer;
+        
+        public SplineContainer m_SplineContainer;
         [Obsolete("Use Container instead.", false)]
         public SplineContainer splineContainer => Container;
         public SplineContainer Container => m_SplineContainer;

@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6306747285453618359}
   - component: {fileID: 2244155001821753543}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: MysteryBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

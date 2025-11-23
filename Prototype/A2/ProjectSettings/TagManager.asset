@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MysteryCube
   - Car
+  - Vehicle
   layers:
   - Default
   - TransparentFX
