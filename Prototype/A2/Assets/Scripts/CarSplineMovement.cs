@@ -17,6 +17,7 @@ namespace Unity.Splines.Examples
     public class CameraFollowCar : MonoBehaviour
     {
 
+        public bool isPlayer = false;
         public Camera _cam;
         public GameObject camholder;
 
@@ -27,18 +28,22 @@ namespace Unity.Splines.Examples
         private void Update()
         {
 
-            if (thirdPersonCam)
+            if(isPlayer)
             {
-                float posx = transform.position.x;
-                float posy = transform.position.y;
-                float posZ = transform.position.z;
+                if (thirdPersonCam)
+                {
+                    float posx = transform.position.x;
+                    float posy = transform.position.y;
+                    float posZ = transform.position.z;
 
 
 
-                _cam.transform.position = camholder.transform.position;
-                _cam.transform.LookAt(new Vector3(posx, posy, posZ));
+                    _cam.transform.position = camholder.transform.position;
+                    _cam.transform.LookAt(new Vector3(posx, posy, posZ));
 
+                }
             }
+
 
         }
 

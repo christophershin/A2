@@ -12,11 +12,6 @@ namespace Unity.Splines.Examples
     public class AnimateCar : MonoBehaviour
     {
 
-        [SerializeField]
-        int startPosition = 0;
-        [SerializeField]
-        SplineContainer m_SplineContainer2;
-
 
         [SerializeField]
         SplineContainer m_SplineContainer;

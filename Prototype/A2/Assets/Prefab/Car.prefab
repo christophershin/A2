@@ -289,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340c4ee80e3a3c045961c024848ed77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unity.Splines.Examples.HighwayExample
+  isPlayer: 0
   _cam: {fileID: 5079643036325806006}
   camholder: {fileID: 7393521879895988691}
   thirdPersonCam: 0
@@ -304,8 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480b9a3a77a10bf4a9e51fe87b5dbd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unity.Splines.Examples.AnimateCar
-  startPosition: 0
-  m_SplineContainer2: {fileID: 0}
   m_SplineContainer: {fileID: 0}
   m_CarToAnimate: {fileID: 5550483665372382827}
   m_DefaultSpeed: 0
@@ -314,7 +313,7 @@ MonoBehaviour:
   MaxSpeed: 40
   m_Speed:
     m_IndexUnit: 2
-    m_DefaultValue: 6
+    m_DefaultValue: 3
     m_DataPoints: []
   m_Tilt:
     m_IndexUnit: 2
