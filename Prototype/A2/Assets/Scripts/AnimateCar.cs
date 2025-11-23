@@ -14,6 +14,8 @@ namespace Unity.Splines.Examples
 
         [SerializeField]
         int startPosition = 0;
+        [SerializeField]
+        SplineContainer m_SplineContainer2;
 
 
         [SerializeField]

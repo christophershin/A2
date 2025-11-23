@@ -153,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 1260631482381070171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.185, y: 0.555, z: 0.089}
+  m_LocalPosition: {x: 0.192, y: 0.648, z: -0.013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -272,9 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00edd19ded74114db7407305146ce46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCar
-  hand: {fileID: 4206526000209838802}
+  hand: {fileID: 2427006339726140959}
+  model: {fileID: 6155085333966485135}
   items:
   - {fileID: 2202302357278589422}
+  itemHoldTimer: 0
 --- !u!114 &6700160380803450373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unity.Splines.Examples.AnimateCar
   startPosition: 0
+  m_SplineContainer2: {fileID: 0}
   m_SplineContainer: {fileID: 0}
   m_CarToAnimate: {fileID: 5550483665372382827}
   m_DefaultSpeed: 0
@@ -613,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.051
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -667,27 +670,27 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -4728426434207774260, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2715566404302941441, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1261756341564054248}
+      addedObject: {fileID: 4443935744065566077}
   m_SourcePrefab: {fileID: 100100000, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
 --- !u!4 &255418013706366197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
   m_PrefabInstance: {fileID: 288745127823362846}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4206526000209838802 stripped
+--- !u!1 &2427006339726140959 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -4728426434207774260, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2715566404302941441, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
   m_PrefabInstance: {fileID: 288745127823362846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1261756341564054248
+--- !u!114 &4443935744065566077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4206526000209838802}
+  m_GameObject: {fileID: 2427006339726140959}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ca45bb53dc94f478358a1b6475653d, type: 3}
@@ -699,6 +702,11 @@ MonoBehaviour:
   Iterations: 10
   Delta: 0.001
   SnapBackStrength: 1
+--- !u!95 &6155085333966485135 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 416ffd84bd4caa94db3b3bd05e9d0f9d, type: 3}
+  m_PrefabInstance: {fileID: 288745127823362846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2463630143708894676
 PrefabInstance:
   m_ObjectHideFlags: 0
