@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8009934965567851177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   navTargetwithOffset: {fileID: 2465254965830668750, guid: 6d0ace4e82829734594a8f5f50ff982e, type: 3}
-  maxTargetWithOffset: 100
+  maxTargetWithOffset: 110
   splineContainer1: {fileID: 0}
   splineContainer2: {fileID: 0}
   splineContainer3: {fileID: 0}

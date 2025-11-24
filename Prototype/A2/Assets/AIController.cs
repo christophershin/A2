@@ -23,7 +23,9 @@ public class NavController : MonoBehaviour
 
             if(dis>=maxTargetDistance)
             {
+                theTarget.GetComponent<NavTarget>().isOccupied = false;
                 theTarget = null;
+                
             }
             else
             {
